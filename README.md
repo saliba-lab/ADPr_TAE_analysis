@@ -1,5 +1,5 @@
 # MBE analysis (ADPr-TAE project)
-This repository contains scripts for analysis and visualization of mutational base editing (MBE) starting from CRISPResso outputs. They were used in the following paper:
+This repository contains scripts for analysis and visualization of mutational base editing (MBE) starting from CRISPResso2 outputs. They were used in the following paper:
 
 [**Landscape and age dynamics of immune cells in the Egyptian rousette bat (2022)**](https://www.helmholtz-hiri.de/en/research/organisation/teams/team/rna-synthetic-biology/)
 
@@ -10,16 +10,16 @@ This repository contains scripts for analysis and visualization of mutational ba
 ## Data Accessibility
 Example data to run the scripts are available in the **data** folder of this repository.
 
-The actual raw sequencing data used in the paper are available at [SRA](https://www.helmholtz-hiri.de/en/research/organisation/teams/team/rna-synthetic-biology/) and should be processed with CRISPResso beforehand.
+The actual raw sequencing data used in the paper are available at [SRA](https://www.helmholtz-hiri.de/en/research/organisation/teams/team/rna-synthetic-biology/) and should be processed with CRISPResso2 beforehand.
 
-Generally speaking, these scripts can be reused (after modifications) with any result table obtained from CRISPResso.
+Generally speaking, these scripts can be reused (after modifications) with any result table obtained from CRISPResso2.
 
 ## Repository Structure
 **data:** Directory containing example data.
 
 **analysis:** Directory containing the R and python scripts.
 
-**outputs:** This directory is created when running the scripts. It will contain the processed data and different tables.
+**outputs:** This directory is created when running the scripts. It will contain the processed data and different tables/plots.
 
 ## Code Execution
 #### 1- Download repository
@@ -47,5 +47,10 @@ List of R packages necessary to run the scripts.
 - R                 4.0.3
 - dplyr             1.0.10
 - openxlsx          4.2.3
+- ggplot2           3.4.0
+- cowplot           1.1.1
+- tidyverse         1.3.0
+- GenomicAlignments ?
+- gt                ?
 - [Must be completed]
 
