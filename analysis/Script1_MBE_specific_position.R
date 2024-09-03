@@ -6,7 +6,7 @@
 #
 # Sample information regarding the replicates (group) and parameters must be reported in the sample sheet.
 #
-# KNOWN LIMITATION: can't handle multiple samples with different reference nucleotides
+# KNOWN LIMITATION: can't handle multiple samples with different reference sequences
 
 # Set up directories ====
 wd_dir <- "."
