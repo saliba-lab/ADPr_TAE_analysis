@@ -1,9 +1,7 @@
-Sample,Group,Replicate,Mutation_position,Threshold_read_counts
-E73_A4.txt,A,1,6,60
-E73_A5.txt,A,2,6,60
-E73_A6.txt,A,3,6,60
-E73_B4.txt,B,1,6,60
-E73_B5.txt,B,2,6,60
-E73_B6.txt,B,3,6,60
-E73_C5.txt,C,1,6,60
-E73_C6.txt,C,2,6,60
+Sample,Group,Replicate,Threshold_read_counts
+E72.A1.txt,A,1,60
+E72.A2.txt,A,2,60
+E72.A3.txt,A,3,60
+E72.B1.txt,B,1,60
+E72.B2.txt,B,2,60
+E72.B3.txt,B,3,60

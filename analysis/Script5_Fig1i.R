@@ -48,20 +48,5 @@ plotA <- ggplot(data=df7, aes(x=Colony, y=SNV, fill=n)) +
   guides(fill = guide_colourbar(barwidth = 1, barheight = 15))+
   theme( axis.text.x = element_text(size = 12), axis.text.y = element_text(size = 12))+
   theme_minimal()
-  
-
-
-## Add motif information. Each POS was manually searched against NCBI Reference Sequence NC_000913.3 to extract the motif, with the SNV centered on character-3.
-library(gt)
-paste_motif <- strsplit("ATTG,ATCG,AGTG,GCTG,GTCG,ATTG,TCCA,GTCG,CTCA,TTTC,TTTC,ATCG,TCCA,CTCA,TGTG,GTCG,TGTG,CTCT,CTCT,CTCC,ATTG,GCTG,CTCC,GTCC,TTCC,GTCA,AATG,GTCG,TTCA,CGCC,ATCG,AATG,TTCC,TTCC,TTCC", split = ",")
-df10 <- cbind(df6, paste_motif); colnames(df10)[7] <- "Motif"
-df11 <- df10 %>% mutate(Editor = factor(Plasmid, levels=c(11,167,190),labels=c("nCas9","DarT(G49D)-nCas9","APOBEC-nCas9")),
-                        Colony = Colony,
-                        "Position" = POS,
-                        "Read Depth" = DP,
-                        "Frequency" = AF,
-                        SNV = str_c(str_sub(SNV, 1, 1), ">", str_sub(SNV, 2, 2)), .keep="unused") %>% 
-  select(c("Editor", "SNV", "Motif", "Colony", "Position", "Read Depth", "Frequency")) %>% arrange(Editor, SNV)
-
-tableA <- gt(df11) ; tableA
+plotA
 ###################### END OF SCRIPT ######################
